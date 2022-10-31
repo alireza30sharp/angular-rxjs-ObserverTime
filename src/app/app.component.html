@@ -1,0 +1,27 @@
+<hello name="{{ name }}"></hello>
+
+<div>
+  <h1>Type Emition</h1>
+  <section>
+    <h2>debounceTime,distinctUntilChanged</h2>
+    <input
+      #input
+      [(ngModel)]="search"
+      (ngModelChange)="inputSub.next(input.value)"
+    />
+    {{ change }}
+  </section>
+
+  <section>
+    <h2>Observable,Observer,throttleTime</h2>
+    <button (click)="_Login()">login</button>
+    <button (click)="loginSub.next(true)">login2</button>
+  </section>
+
+  <section>
+    <h1>Type subscribion</h1>
+    <h2>sample,sampleTime</h2>
+    <button id="btn">click</button>
+    {{_inter}} :::{{numberclick}}
+  </section>
+</div>
